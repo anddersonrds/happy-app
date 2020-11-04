@@ -1,12 +1,21 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
     "jsx": "react-native",
-    "lib": ["dom", "esnext"],
-    "moduleResolution": "node",
-    "noEmit": true,
+    "lib": ["es2015", "es2015.promise", "es2016.array.include", "dom", "esnext"],
     "skipLibCheck": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "@assets/*": ["src/assets/*"]
+    },
+    "noEmit": true,
     "resolveJsonModule": true,
-    "strict": true
-  }
+    "target": "esnext",
+  },
+  "exclude": ["node_modules", "babel.config.js", "metro.config.js"]
 }
