@@ -4,17 +4,20 @@ module.exports = function(api) {
     presets: ['babel-preset-expo'],
     plugins: [
       [
-        require.resolve('babel-plugin-module-resolver'),
+        'module-resolver',
         {
-          cwd: 'babelrc',
           extensions: ['.ts', '.tsx', '.js', '.ios.js', '.android.js'],
           alias: {
             '@app': './src',
-            '@assets/*': './src/assets/*'
+            '@assets': './src/assets',
+            '@components': './src/components',
+            '@hooks': './src/hooks',
+            '@pages': './src/pages',
+            '@routes': './src/routes',
+            '@styles': './src/styles',
           }
         }
       ],
-      'jest-hoist'
     ]
   };
 };
